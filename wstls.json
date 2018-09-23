@@ -1,0 +1,49 @@
+{
+  "log": {
+    "loglevel": "none",
+    "access": "", 
+    "error": ""
+  },
+  "inbound": {
+    "port": 1080,
+    "protocol": "socks",
+    "domainOverride": ["tls","http"],
+    "settings": {
+      "auth": "noauth",
+	  "udp": false
+    }
+  },
+  "outbound": {
+    "protocol": "vmess",
+    "settings": {
+      "vnext": [
+        {
+          "address": "xxxxxx.com",
+          "port": 443,
+          "users": [
+            {
+              "id": "xxxxxxxx",
+              "alterId": 64,
+	      "security": "aes-128-gcm",
+	      "level": 1
+            }
+          ]
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "security": "tls",
+      "wsSettings": {
+            "connectionReuse": false,
+            "path": "/xxx"
+      },
+      "tlsSettings": {
+          "serverName": "xxx.com",
+          "allowInsecure": false,
+	  "allowInsecureCiphers": false
+      }
+    }
+  }
+}
+
