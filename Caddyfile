@@ -1,0 +1,19 @@
+http://XXXX.COM {
+ redir https://XXXX.COM{url}
+}
+https://XXX.COM {
+ filemanager /XXXX /XXX/XXX/ {
+ database /etc/ssl/caddy/filemanager/filemanager.db
+}
+ gzip
+ root /XXX/XXXX
+ index index.html
+ timeouts none
+ header / Strict-Transport-Security "max-age=31536000;"
+ tls XXX@XXX.COM {
+ key_type p256
+}
+ proxy /XXXXX localhost:10000 {
+ websocket
+  }
+}
