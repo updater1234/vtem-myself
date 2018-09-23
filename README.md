@@ -1,2 +1,2 @@
 # vtem-myself
-个人使用的v2ray模板
+自己使用的v2ray模板
