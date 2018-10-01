@@ -1,3 +1,6 @@
+http://www.xxxx.com {
+ redir https://xxx.com{url}
+}
 http://XXXX.COM {
  redir https://XXXX.COM{url}
 }
