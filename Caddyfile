@@ -9,6 +9,12 @@ https://XXX.COM {
  database /etc/ssl/caddy/filemanager/filemanager.db
 }
  gzip
+ log /xxx/xxx.log {
+	rotate_size 1024
+	rotate_age 365
+	rotate_keep x
+ except /xxxxxx
+}
  root /XXX/XXXX
  index index.html
  timeouts none
