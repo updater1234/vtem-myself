@@ -5,9 +5,6 @@ http://XXXX.COM {
  redir https://XXXX.COM{url}
 }
 https://XXX.COM {
- filemanager /XXXX /XXX/XXX/ {
- database /etc/ssl/caddy/filemanager/filemanager.db
-}
  gzip
  log /xxx/xxx.log {
 	rotate_size 1024
@@ -20,7 +17,8 @@ https://XXX.COM {
  timeouts none
  header / Strict-Transport-Security "max-age=31536000;"
  tls XXX@XXX.COM {
- key_type p256
+ protocols tls1.2 tls1.3
+ must_staple
 }
  proxy /XXXXX localhost:10000 {
  websocket
