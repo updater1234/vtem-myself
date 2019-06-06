@@ -1,18 +1,9 @@
-http://www.xxxx.com {
- redir https://xxx.com{url}
-}
 http://XXXX.COM {
  redir https://XXXX.COM{url}
 }
 https://XXX.COM {
  gzip
- log /xxx/xxx.log {
-	rotate_size 1024
-	rotate_age 365
-	rotate_keep x
- except /xxxxxx
-}
- root /XXX/XXXX
+ root /xxx/xxx
  index index.html
  timeouts none
  header / Strict-Transport-Security "max-age=31536000;"
